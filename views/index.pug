@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p
+  | Use the form below to upload a csv file with store details.
+  form(action='/upload', method='POST', enctype='multipart/form-data')
+    input(type='file', name='file', accept='*.csv')
+    br
+    br
+    input(type='submit', value='Upload CSV')
