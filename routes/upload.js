@@ -1,9 +1,7 @@
 var express = require("express");
+var upload = require("../controllers/upload");
 var router = express.Router();
 
-/* GET stores. */
-router.get("/", function(req, res, next) {
-  res.send("hi");
-});
+router.post("/", upload.post);
 
 module.exports = router;
