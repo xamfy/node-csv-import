@@ -21,7 +21,7 @@ app.set("view engine", "pug");
 
 // default options
 app.use(fileUpload());
-mongoose.connect("mongodb://localhost/switchip", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 app.use(logger("dev"));
 app.use(express.json());
