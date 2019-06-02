@@ -22,9 +22,12 @@ app.set("view engine", "pug");
 
 // default options
 app.use(fileUpload());
+// process.env.MONGODB_URI
+// "mongodb://localhost/dbproducts"
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 app.use(logger("dev"));
+process.env.MONGODB_URI;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
